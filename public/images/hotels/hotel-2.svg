@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="sunset" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF6B35"/>
+      <stop offset="100%" stop-color="#FFD700"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#sunset)" width="800" height="600"/>
+  <rect fill="#1a1a2e" x="150" y="180" width="500" height="320" rx="6"/>
+  <rect fill="#16213e" x="170" y="200" width="460" height="280" rx="4"/>
+  <rect fill="#e8d5b7" opacity="0.4" x="200" y="240" width="60" height="50" rx="2"/>
+  <rect fill="#e8d5b7" opacity="0.4" x="300" y="240" width="60" height="50" rx="2"/>
+  <rect fill="#e8d5b7" opacity="0.4" x="400" y="240" width="60" height="50" rx="2"/>
+  <rect fill="#e8d5b7" opacity="0.4" x="500" y="240" width="60" height="50" rx="2"/>
+  <rect fill="#e8d5b7" opacity="0.4" x="200" y="320" width="60" height="50" rx="2"/>
+  <rect fill="#e8d5b7" opacity="0.4" x="300" y="320" width="60" height="50" rx="2"/>
+  <rect fill="#e8d5b7" opacity="0.4" x="400" y="320" width="60" height="50" rx="2"/>
+  <rect fill="#e8d5b7" opacity="0.4" x="500" y="320" width="60" height="50" rx="2"/>
+  <rect fill="#c9a959" x="360" y="400" width="80" height="100" rx="2"/>
+  <circle fill="#FFD700" opacity="0.3" cx="650" cy="100" r="80"/>
+  <text fill="#fff" font-family="serif" font-size="28" x="400" y="560" text-anchor="middle">Seaside Resort</text>
+</svg>

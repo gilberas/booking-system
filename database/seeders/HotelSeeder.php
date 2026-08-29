@@ -1,0 +1,142 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\Hotel;
+use Illuminate\Database\Seeder;
+
+class HotelSeeder extends Seeder
+{
+    public function run(): void
+    {
+        $hotels = [
+            [
+                'name' => 'Amalfi Crest',
+                'slug' => 'amalfi-crest',
+                'description' => 'Cliffside infinity suite with panoramic Tyrrhenian Sea views.',
+                'address' => 'Via Cristoforo Colombo 30',
+                'city' => 'Positano',
+                'state' => 'Campania',
+                'country' => 'Italy',
+                'postal_code' => '84017',
+                'phone' => '+39 089 875 001',
+                'email' => 'reservations@amalficrest.com',
+                'website' => 'https://amalficrest.com',
+                'star_rating' => 5,
+                'price' => 680,
+                'rating' => 4.9,
+                'reviews_count' => 412,
+                'check_in_time' => '15:00:00',
+                'check_out_time' => '11:00:00',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Obsidian Peaks',
+                'slug' => 'obsidian-peaks',
+                'description' => 'Ski-in/ski-out lodge framing the iconic Matterhorn.',
+                'address' => 'Bahnhofstrasse 42',
+                'city' => 'Zermatt',
+                'state' => 'Valais',
+                'country' => 'Switzerland',
+                'postal_code' => '3920',
+                'phone' => '+41 27 966 001',
+                'email' => 'reservations@obsidianpeaks.com',
+                'website' => 'https://obsidianpeaks.com',
+                'star_rating' => 5,
+                'price' => 920,
+                'rating' => 4.8,
+                'reviews_count' => 287,
+                'check_in_time' => '15:00:00',
+                'check_out_time' => '11:00:00',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Velour Skyline',
+                'slug' => 'velour-skyline',
+                'description' => 'Floor-to-ceiling city panorama from the 72nd floor.',
+                'address' => 'Sheikh Zayed Road, Tower 1',
+                'city' => 'Dubai',
+                'state' => 'Dubai',
+                'country' => 'UAE',
+                'postal_code' => '00000',
+                'phone' => '+971 4 555 0001',
+                'email' => 'reservations@velourskyline.com',
+                'website' => 'https://velourskyline.com',
+                'star_rating' => 5,
+                'price' => 1240,
+                'rating' => 4.9,
+                'reviews_count' => 631,
+                'check_in_time' => '15:00:00',
+                'check_out_time' => '12:00:00',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Cerulean Isle',
+                'slug' => 'cerulean-isle',
+                'description' => 'Private overwater bungalow with direct reef access.',
+                'address' => 'Baa Atoll, Kunfunadhoo',
+                'city' => 'Baa Atoll',
+                'state' => 'Baa',
+                'country' => 'Maldives',
+                'postal_code' => '00000',
+                'phone' => '+960 660 0001',
+                'email' => 'reservations@ceruleanisle.com',
+                'website' => 'https://ceruleanisle.com',
+                'star_rating' => 5,
+                'price' => 1850,
+                'rating' => 5.0,
+                'reviews_count' => 198,
+                'check_in_time' => '14:00:00',
+                'check_out_time' => '11:00:00',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Palomar Grand',
+                'slug' => 'palomar-grand',
+                'description' => 'Chandelier halls in a restored 19th-century merchant palace.',
+                'address' => 'Passeig de Gràcia 75',
+                'city' => 'Barcelona',
+                'state' => 'Catalonia',
+                'country' => 'Spain',
+                'postal_code' => '08008',
+                'phone' => '+34 93 555 0001',
+                'email' => 'reservations@palomargrand.com',
+                'website' => 'https://palomargrand.com',
+                'star_rating' => 4,
+                'price' => 560,
+                'rating' => 4.7,
+                'reviews_count' => 844,
+                'check_in_time' => '15:00:00',
+                'check_out_time' => '11:00:00',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Kaia Cove',
+                'slug' => 'kaia-cove',
+                'description' => 'Lush hillside villas cascading to a private beach.',
+                'address' => '123 Kata Noi Road',
+                'city' => 'Phuket',
+                'state' => 'Phuket',
+                'country' => 'Thailand',
+                'postal_code' => '83100',
+                'phone' => '+66 76 555 001',
+                'email' => 'reservations@kaiacove.com',
+                'website' => 'https://kaiacove.com',
+                'star_rating' => 5,
+                'price' => 390,
+                'rating' => 4.8,
+                'reviews_count' => 521,
+                'check_in_time' => '14:00:00',
+                'check_out_time' => '11:00:00',
+                'is_active' => true,
+            ],
+        ];
+
+        foreach ($hotels as $hotel) {
+            Hotel::firstOrCreate(
+                ['slug' => $hotel['slug']],
+                $hotel
+            );
+        }
+    }
+}

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="280" viewBox="0 0 400 280">
+  <rect fill="#fce4ec" width="400" height="280" rx="16"/>
+  <circle fill="#2c4a35" opacity="0.1" cx="200" cy="120" r="60"/>
+  <text fill="#2c4a35" font-family="sans-serif" font-size="48" x="200" y="140" text-anchor="middle">💪</text>
+  <text fill="#2c4a35" font-family="sans-serif" font-size="16" font-weight="600" x="200" y="210" text-anchor="middle">Gym</text>
+  <text fill="#8a8a82" font-family="sans-serif" font-size="12" x="200" y="235" text-anchor="middle">State-of-the-art fitness center</text>
+</svg>

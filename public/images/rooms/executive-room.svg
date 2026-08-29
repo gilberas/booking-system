@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect fill="#f5f1eb" width="800" height="600"/>
+  <rect fill="#e8e0d4" x="100" y="200" width="600" height="250" rx="8"/>
+  <rect fill="#ddd8ce" x="120" y="210" width="560" height="230" rx="4"/>
+  <rect fill="#fff" x="140" y="230" width="240" height="190" rx="2"/>
+  <rect fill="#fff" x="400" y="230" width="240" height="190" rx="2"/>
+  <rect fill="#2c4a35" opacity="0.1" x="150" y="240" width="100" height="100" rx="2"/>
+  <rect fill="#c9a959" opacity="0.3" x="410" y="240" width="100" height="100" rx="2"/>
+  <rect fill="#8B4513" x="300" y="370" width="200" height="90" rx="2"/>
+  <rect fill="#2c4a35" opacity="0.15" x="620" y="230" width="60" height="190" rx="2"/>
+  <circle fill="#2c4a35" opacity="0.08" cx="700" cy="100" r="80"/>
+  <text fill="#2c4a35" font-family="serif" font-size="32" x="400" y="520" text-anchor="middle">Executive Room</text>
+  <text fill="#8a8a82" font-family="sans-serif" font-size="14" x="400" y="550" text-anchor="middle">Premium king bed &amp; lounge access</text>
+</svg>

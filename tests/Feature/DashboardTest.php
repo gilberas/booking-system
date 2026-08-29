@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Models\Role;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
@@ -16,12 +17,20 @@ class DashboardTest extends TestCase
         $response->assertRedirect(route('login'));
     }
 
-    public function test_authenticated_users_can_visit_the_dashboard(): void
+    public function test_authenticated_users_are_redirected_to_their_role_dashboard(): void
     {
+        $role = Role::create([
+            'name' => 'Registered Customer',
+            'slug' => 'registered-customer',
+        ]);
+
         $user = User::factory()->create();
+        $user->roles()->attach($role);
+
         $this->actingAs($user);
 
-        $response = $this->get(route('dashboard'));
-        $response->assertOk();
+        $this->get(route('dashboard'))->assertRedirect(route('customer.dashboard'));
+
+        $this->get(route('customer.dashboard'))->assertOk();
     }
 }

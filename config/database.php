@@ -57,8 +57,10 @@ return [
             'collation' => env('DB_COLLATION', 'utf8mb4_unicode_ci'),
             'prefix' => '',
             'prefix_indexes' => true,
+            // Pinned to InnoDB so foreign keys and transactions are always
+            // enforced, regardless of the server's default engine.
+            'engine' => 'InnoDB',
             'strict' => true,
-            'engine' => null,
             'options' => extension_loaded('pdo_mysql') ? array_filter([
                 Mysql::ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],
@@ -77,8 +79,10 @@ return [
             'collation' => env('DB_COLLATION', 'utf8mb4_unicode_ci'),
             'prefix' => '',
             'prefix_indexes' => true,
+            // Pinned to InnoDB so foreign keys and transactions are always
+            // enforced, regardless of the server's default engine.
+            'engine' => 'InnoDB',
             'strict' => true,
-            'engine' => null,
             'options' => extension_loaded('pdo_mysql') ? array_filter([
                 Mysql::ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],

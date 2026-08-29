@@ -25,7 +25,7 @@ class TwoFactorChallengeTest extends TestCase
         $response->assertRedirect(route('login'));
     }
 
-    public function test_two_factor_challenge_can_be_rendered(): void
+    public function test_login_redirects_to_mfa_verification_after_credentials_are_validated(): void
     {
         Features::twoFactorAuthentication([
             'confirm' => true,
@@ -37,6 +37,8 @@ class TwoFactorChallengeTest extends TestCase
         $this->post(route('login.store'), [
             'email' => $user->email,
             'password' => 'password',
-        ])->assertRedirect(route('two-factor.login'));
+        ])->assertRedirect(route('mfa.verify'));
+
+        $this->assertGuest();
     }
 }

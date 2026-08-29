@@ -1,0 +1,172 @@
+<mxfile host="app.diagrams.net" modified="2026-07-19T00:00:00.000Z" agent="opencode" version="24.0.0" type="device">
+  <diagram id="hotel-cloud-analytics" name="Hotel Cloud Analytics Architecture">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="Cloud-Based Data Analytics Solution for a Hotel Chain" style="text;html=1;align=center;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1">
+          <mxGeometry x="400" y="20" width="800" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Organization: Grandview Hotels (mid-size hotel chain) | 1,000 users | Public-Hybrid Cloud" style="text;html=1;align=center;verticalAlign=middle;fontSize=12;fontColor=#64748B;" vertex="1" parent="1">
+          <mxGeometry x="400" y="62" width="800" height="24" as="geometry" />
+        </mxCell>
+
+        <!-- ============ CLIENT DEVICES ============ -->
+        <mxCell id="clientLayer" value="CLIENT DEVICES" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E2E8F0;strokeColor=#64748B;fontStyle=1;fontSize=13;verticalAlign=top;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="110" width="280" height="470" as="geometry" />
+        </mxCell>
+        <mxCell id="devReception" value="Reception Desktops" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2563EB;" vertex="1" parent="1">
+          <mxGeometry x="65" y="150" width="110" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="devManager" value="Manager Laptops" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2563EB;" vertex="1" parent="1">
+          <mxGeometry x="190" y="150" width="110" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="devMobile" value="Staff Mobile (PWA / App)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2563EB;" vertex="1" parent="1">
+          <mxGeometry x="65" y="225" width="110" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="devKiosk" value="Self-Service Kiosks" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2563EB;" vertex="1" parent="1">
+          <mxGeometry x="190" y="225" width="110" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="devAnalyst" value="Analyst BI Workstations" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2563EB;" vertex="1" parent="1">
+          <mxGeometry x="65" y="300" width="110" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="devIoT" value="IoT Sensors (energy / access)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2563EB;" vertex="1" parent="1">
+          <mxGeometry x="190" y="300" width="110" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="devGuest" value="Guest Devices (Booking Portal)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2563EB;" vertex="1" parent="1">
+          <mxGeometry x="65" y="375" width="110" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="devPos" value="POS / Payment Terminals" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2563EB;" vertex="1" parent="1">
+          <mxGeometry x="190" y="375" width="110" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- ============ INTERNET / CDN ============ -->
+        <mxCell id="internet" value="INTERNET / CDN / DNS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D4AF37;fontStyle=1;fontSize=13;verticalAlign=top;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="360" y="110" width="220" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="cdn" value="CloudFront / CDN" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D4AF37;" vertex="1" parent="1">
+          <mxGeometry x="380" y="150" width="90" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="dns" value="Route 53 DNS + WAF" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D4AF37;" vertex="1" parent="1">
+          <mxGeometry x="480" y="150" width="80" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="lb" value="Load Balancer (ALB)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D4AF37;" vertex="1" parent="1">
+          <mxGeometry x="400" y="240" width="140" height="45" as="geometry" />
+        </mxCell>
+
+        <!-- ============ CLOUD SERVICES (PUBLIC) ============ -->
+        <mxCell id="cloudLayer" value="CLOUD SERVICES - PUBLIC CLOUD (AWS / Azure)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#2563EB;fontStyle=1;fontSize=13;verticalAlign=top;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="620" y="110" width="930" height="700" as="geometry" />
+        </mxCell>
+
+        <!-- Backend -->
+        <mxCell id="backendBox" value="BACKEND (Compute / PaaS)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2563EB;dashed=1;verticalAlign=top;fontStyle=1;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="640" y="135" width="430" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="api" value="API Gateway + Auth (JWT / OAuth2)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;" vertex="1" parent="1">
+          <mxGeometry x="660" y="165" width="180" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="appsvc" value="App Services (Booking, Payments, Reports)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;" vertex="1" parent="1">
+          <mxGeometry x="660" y="220" width="180" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="func" value="Serverless Functions (ETL / Notifications)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;" vertex="1" parent="1">
+          <mxGeometry x="660" y="290" width="180" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="queue" value="Message Queue (SQS / Event Bus)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;" vertex="1" parent="1">
+          <mxGeometry x="860" y="220" width="190" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="ml" value="ML Service (Demand / Dynamic Pricing)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;" vertex="1" parent="1">
+          <mxGeometry x="860" y="290" width="190" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- Database -->
+        <mxCell id="dbBox" value="DATABASE (Managed / PaaS)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#10B981;dashed=1;verticalAlign=top;fontStyle=1;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="640" y="385" width="430" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="dbSql" value="Relational DB (PostgreSQL / MySQL) - Bookings, Guests, Payments" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#D1FAE5;strokeColor=#10B981;boundedLbl=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="405" width="390" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="dbCache" value="Cache (Redis) - Sessions / Availability" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#D1FAE5;strokeColor=#10B981;boundedLbl=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="470" width="190" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="dbDw" value="Data Warehouse (Redshift / BigQuery)" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#D1FAE5;strokeColor=#10B981;boundedLbl=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="860" y="470" width="190" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Storage -->
+        <mxCell id="storageBox" value="STORAGE (Object / PaaS)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#8B5CF6;dashed=1;verticalAlign=top;fontStyle=1;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="640" y="555" width="430" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="s3" value="Object Storage (S3) - Docs, Images, Backups" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#EDE9FE;strokeColor=#8B5CF6;boundedLbl=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="580" width="190" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="lake" value="Data Lake (Parquet / Iceberg)" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#EDE9FE;strokeColor=#8B5CF6;boundedLbl=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="860" y="580" width="190" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="backup" value="Backup Vault (Cross-region)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDE9FE;strokeColor=#8B5CF6;" vertex="1" parent="1">
+          <mxGeometry x="660" y="645" width="390" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Analytics / Frontend -->
+        <mxCell id="analyticsBox" value="DATA ANALYTICS &amp; FRONTEND" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#EF4444;dashed=1;verticalAlign=top;fontStyle=1;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="1090" y="135" width="440" height="540" as="geometry" />
+        </mxCell>
+        <mxCell id="etl" value="ETL / Pipelines (Glue / Dataflow)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCE4EC;strokeColor=#EF4444;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="165" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="bi" value="BI Dashboards (Power BI / Looker / Tableau)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCE4EC;strokeColor=#EF4444;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="165" width="190" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="feAdmin" value="Admin / Staff Frontend (Web App)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCE4EC;strokeColor=#EF4444;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="235" width="200" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="feGuest" value="Guest Booking Portal (Web + Mobile)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCE4EC;strokeColor=#EF4444;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="235" width="190" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="report" value="Automated Reports &amp; Alerts" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCE4EC;strokeColor=#EF4444;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="310" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="mlDash" value="Predictive Analytics (Occupancy / Revenue)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCE4EC;strokeColor=#EF4444;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="310" width="190" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="noteInner" value="Data Flow: Client -&gt; Internet/CDN -&gt; API Gateway -&gt; Backend Services -&gt; DB / Storage -&gt; ETL -&gt; Data Warehouse -&gt; BI Dashboards" style="text;html=1;align=left;verticalAlign=top;fontSize=10;fontColor=#64748B;fillColor=#FFF7ED;strokeColor=#FDBA74;rounded=1;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="385" width="400" height="75" as="geometry" />
+        </mxCell>
+
+        <!-- ============ PRIVATE / ON-PREM (HYBRID) ============ -->
+        <mxCell id="privateLayer" value="PRIVATE CLOUD / ON-PREMISE (HYBRID PART)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#0F172A;fontStyle=1;fontSize=13;verticalAlign=top;dashed=1;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="620" y="825" width="930" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="privPii" value="PII Vault (Guest IDs, Payment Tokens) - Encrypted, On-Prem" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#E2E8F0;strokeColor=#0F172A;boundedLbl=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="860" width="430" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="privVpn" value="VPN / Direct Connect Tunnel (Encrypted)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E2E8F0;strokeColor=#0F172A;" vertex="1" parent="1">
+          <mxGeometry x="1090" y="865" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="privComp" value="Compliance / Audit Node (PCI-DSS, GDPR)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E2E8F0;strokeColor=#0F172A;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="865" width="200" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- ============ CONNECTORS ============ -->
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#334155;strokeWidth=2;endArrow=block;" edge="1" parent="1" source="clientLayer" target="internet"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#D4AF37;strokeWidth=2;endArrow=block;" edge="1" parent="1" source="lb" target="api"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=block;" edge="1" parent="1" source="api" target="appsvc"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=block;" edge="1" parent="1" source="appsvc" target="queue"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#10B981;strokeWidth=2;endArrow=block;" edge="1" parent="1" source="appsvc" target="dbSql"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#10B981;strokeWidth=2;endArrow=block;" edge="1" parent="1" source="dbSql" target="dbDw"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#8B5CF6;strokeWidth=2;endArrow=block;" edge="1" parent="1" source="appsvc" target="s3"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#EF4444;strokeWidth=2;endArrow=block;" edge="1" parent="1" source="dbDw" target="etl"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#EF4444;strokeWidth=2;endArrow=block;" edge="1" parent="1" source="etl" target="bi"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#EF4444;strokeWidth=2;endArrow=block;" edge="1" parent="1" source="ml" target="mlDash"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#0F172A;strokeWidth=2;dashed=1;endArrow=block;" edge="1" parent="1" source="dbSql" target="privPii"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#0F172A;strokeWidth=2;dashed=1;endArrow=block;" edge="1" parent="1" source="privPii" target="privVpn"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#0F172A;strokeWidth=2;dashed=1;endArrow=block;" edge="1" parent="1" source="privVpn" target="privComp"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=block;" edge="1" parent="1" source="api" target="feAdmin"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=block;" edge="1" parent="1" source="api" target="feGuest"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#EF4444;strokeWidth=2;endArrow=block;" edge="1" parent="1" source="lake" target="etl"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#D4AF37;strokeWidth=2;endArrow=block;" edge="1" parent="1" source="func" target="queue"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

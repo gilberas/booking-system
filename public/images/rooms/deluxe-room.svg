@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect fill="#f5f1eb" width="800" height="600"/>
+  <rect fill="#e8e0d4" x="150" y="220" width="500" height="230" rx="8"/>
+  <rect fill="#ddd8ce" x="170" y="230" width="460" height="210" rx="4"/>
+  <rect fill="#fff" x="190" y="250" width="200" height="170" rx="2"/>
+  <rect fill="#fff" x="410" y="250" width="200" height="170" rx="2"/>
+  <rect fill="#2c4a35" opacity="0.1" x="200" y="260" width="80" height="80" rx="2"/>
+  <rect fill="#c9a959" opacity="0.3" x="420" y="260" width="80" height="80" rx="2"/>
+  <rect fill="#8B4513" x="340" y="380" width="120" height="80" rx="2"/>
+  <circle fill="#2c4a35" opacity="0.08" cx="650" cy="120" r="80"/>
+  <text fill="#2c4a35" font-family="serif" font-size="32" x="400" y="520" text-anchor="middle">Deluxe Room</text>
+  <text fill="#8a8a82" font-family="sans-serif" font-size="14" x="400" y="550" text-anchor="middle">Spacious with queen bed</text>
+</svg>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cloud-Based Data Analytics Solution — Grandview Hotels</title>
+<style>
+  @page { size: A4; margin: 18mm 16mm; }
+  * { box-sizing: border-box; }
+  body { font-family: "Segoe UI", Calibri, Arial, sans-serif; color: #1F2937; line-height: 1.5; font-size: 11pt; margin: 0; }
+  h1 { color: #0F172A; font-size: 22pt; margin: 0 0 4px; }
+  h2 { color: #2563EB; font-size: 14pt; border-bottom: 2px solid #D4AF37; padding-bottom: 4px; margin-top: 26px; }
+  h3 { color: #0F172A; font-size: 12pt; margin-bottom: 4px; }
+  .cover { text-align: center; padding: 60px 0 30px; }
+  .cover .org { color: #D4AF37; font-weight: bold; letter-spacing: 1px; }
+  .cover .meta { color: #64748B; margin-top: 10px; font-size: 10pt; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 10pt; }
+  th, td { border: 1px solid #CBD5E1; padding: 6px 8px; text-align: left; vertical-align: top; }
+  th { background: #0F172A; color: #fff; }
+  tr:nth-child(even) td { background: #F8FAFC; }
+  .callout { background: #FEF3C7; border-left: 4px solid #D4AF37; padding: 8px 12px; margin: 10px 0; }
+  .risk { background: #FCE4EC; border-left: 4px solid #EF4444; padding: 8px 12px; margin: 8px 0; }
+  .ok { color: #10B981; font-weight: bold; }
+  ul { margin: 6px 0 6px 18px; padding: 0; }
+  li { margin-bottom: 3px; }
+  .small { font-size: 9pt; color: #64748B; }
+  .pagebreak { page-break-before: always; }
+  .badge { display: inline-block; background: #2563EB; color: #fff; padding: 1px 8px; border-radius: 10px; font-size: 9pt; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <h1>Cloud-Based Data Analytics Solution</h1>
+  <div class="org">GRANDVIEW HOTELS — MID-SIZE HOTEL CHAIN</div>
+  <div class="meta">
+    Prepared for: Cloud Computing &amp; Data Analytics Course<br>
+    Scope: 1,000 users (reception, managers, analysts, guests) across 8 properties<br>
+    Architecture diagram: <code>architecture.drawio</code> (open in draw.io / Lucidchart)
+  </div>
+</div>
+
+<div class="pagebreak"></div>
+
+<h2>Task 1 — Organization's Needs</h2>
+
+<h3>1.1 Selected Organization</h3>
+<p><b>Grandview Hotels</b> is a mid-size hotel chain operating <b>8 properties</b> (city hotels + resorts) with a combined
+~1,200 rooms. It runs the <code>booking-system</code> application (Laravel + MySQL) described throughout this project for
+reservations, payments, rooms, and staff operations. It employs ~900 staff and serves ~100k guests/year, giving an active
+system user base of <b>1,000 users</b> (internal staff, managers, and data analysts; guests use the public portal).</p>
+
+<h3>1.2 What Data Does the Organization Collect?</h3>
+<table>
+  <tr><th>Data Domain</th><th>Examples</th><th>Source</th></tr>
+  <tr><td>Booking &amp; Reservation</td><td>Booking number, check-in/out, guests, room assignment, status</td><td>Reception, Web Portal</td></tr>
+  <tr><td>Guest / CRM</td><td>Name, email, phone, preferences, loyalty, reviews</td><td>Registration, Front Desk</td></tr>
+  <tr><td>Financial</td><td>Payments, invoices, refunds, discounts, revenue</td><td>POS, Payment Gateway (Stripe)</td></tr>
+  <tr><td>Operations</td><td>Room status, housekeeping, maintenance, inventory</td><td>IoT, Staff App</td></tr>
+  <tr><td>Marketing</td><td>Campaigns, newsletter subs, channel (OTA vs direct)</td><td>Website, CRM</td></tr>
+  <tr><td>External / Market</td><td>Local events, weather, competitor rates, seasonality</td><td>Third-party APIs</td></tr>
+</table>
+
+<h3>1.3 Who Uses the System?</h3>
+<ul>
+  <li><b>Receptionists</b> — check-ins/out, walk-in bookings, room status.</li>
+  <li><b>Hotel Managers</b> — occupancy, revenue, staffing, discounts.</li>
+  <li><b>Revenue / Data Analysts</b> — BI dashboards, forecasting, reporting.</li>
+  <li><b>Administrators / IT</b> — user roles, hotels, system config.</li>
+  <li><b>Guests (external)</b> — search, book, pay, review via web/mobile portal.</li>
+</ul>
+
+<h3>1.4 Current Problems</h3>
+<ul>
+  <li><b>Siloed data:</b> each property runs reports locally; no group-wide view of occupancy or revenue.</li>
+  <li><b>Manual reporting:</b> managers export CSVs to Excel — slow, error-prone, not real-time.</li>
+  <li><b>No predictive insight:</b> pricing is static; demand spikes and low-occupancy periods are missed.</li>
+  <li><b>Scalability ceiling:</b> on-prem MySQL struggles during peak booking seasons and OTA bursts.</li>
+  <li><b>Disaster recovery gaps:</b> nightly backups only; a site failure means hours of downtime and lost bookings.</li>
+  <li><b>Compliance risk:</b> guest PII and payment data stored without centralized encryption/audit.</li>
+</ul>
+
+<h3>1.5 Why Move to the Cloud?</h3>
+<div class="callout">
+  <ul>
+    <li><b>Elastic scale</b> — absorb seasonal booking spikes without over-provisioning hardware.</li>
+    <li><b>Centralized analytics</b> — one warehouse across all 8 properties enables real-time BI.</li>
+    <li><b>Lower TCO</b> — no capital spend on servers; pay-per-use pricing.</li>
+    <li><b>Resilience</b> — multi-AZ, cross-region backups, 99.95% SLA.</li>
+    <li><b>Managed security &amp; compliance</b> — PCI-DSS, GDPR tooling offloaded to the provider.</li>
+    <li><b>Faster innovation</b> — serverless + ML services enable dynamic pricing in weeks, not quarters.</li>
+  </ul>
+</div>
+
+<div class="pagebreak"></div>
+
+<h2>Task 2 — Cloud Solution Architecture</h2>
+<p>The full diagram is in <code>architecture.drawio</code>. The solution flows left-to-right:</p>
+<p><b>Client Devices → Internet/CDN → API Gateway → Backend Services → Database/Storage → ETL → Data Warehouse → BI Dashboards.</b></p>
+
+<table>
+  <tr><th>Layer</th><th>Components</th><th>Purpose</th></tr>
+  <tr><td><b>Client Devices</b></td><td>Reception desktops, manager laptops, staff mobile PWA, self-service kiosks, IoT sensors (energy/access), guest devices, POS terminals</td><td>Data capture &amp; consumption at the edge</td></tr>
+  <tr><td><b>Internet / CDN</b></td><td>CloudFront CDN, Route 53 DNS, WAF, Application Load Balancer (ALB)</td><td>Secure global delivery, DDoS protection, traffic routing</td></tr>
+  <tr><td><b>Backend (PaaS)</b></td><td>API Gateway + Auth (JWT/OAuth2), App Services (Booking, Payments, Reports), Serverless Functions (ETL/notifications), Message Queue, ML Service</td><td>Business logic, integration, event processing</td></tr>
+  <tr><td><b>Database (PaaS)</b></td><td>PostgreSQL/MySQL (relational), Redis (cache), Redshift/BigQuery (warehouse)</td><td>Transactional + analytical storage</td></tr>
+  <tr><td><b>Storage (PaaS)</b></td><td>Object Storage (S3) for docs/images, Data Lake (Parquet/Iceberg), Backup Vault (cross-region)</td><td>Durable, cheap, scalable file &amp; raw-data storage</td></tr>
+  <tr><td><b>Analytics &amp; Frontend</b></td><td>ETL Pipelines, BI Dashboards (Power BI/Looker), Admin/Staff Web App, Guest Portal, Automated Reports, Predictive Analytics</td><td>Insight delivery to every user role</td></tr>
+  <tr><td><b>Private / Hybrid</b></td><td>PII Vault (guest IDs, payment tokens), VPN/Direct Connect, Compliance/Audit node</td><td>Keep regulated data on-prem, encrypted tunnel to cloud</td></tr>
+</table>
+
+<div class="callout"><b>Data Flow Example:</b> A guest books on the portal → API Gateway authenticates → Booking Service writes to PostgreSQL and emits an event to the Queue → Serverless Function sends confirmation + writes to Data Lake → Nightly ETL loads into Warehouse → BI shows live occupancy &amp; revenue.</div>
+
+<div class="pagebreak"></div>
+
+<h2>Task 3 — Cloud Service &amp; Deployment Models</h2>
+
+<h3>3.1 Service Models Used</h3>
+<table>
+  <tr><th>Model</th><th>Used For</th><th>Justification</th></tr>
+  <tr><td><span class="badge">SaaS</span> Software as a Service</td><td>Power BI / Looker (BI), Stripe (payments), email/SMS, GSuite/M365</td><td>Zero-maintenance analytics &amp; business tools; fastest time-to-value; no servers to patch.</td></tr>
+  <tr><td><span class="badge">PaaS</span> Platform as a Service</td><td>Managed DB (PostgreSQL), App Services / Containers, Object Storage, Serverless, Data Warehouse</td><td>Developers focus on booking/revenue logic, not OS/patching; auto-scaling handles peaks.</td></tr>
+  <tr><td><span class="badge">IaaS</span> Infrastructure as a Service</td><td>Virtual network, load balancer, VPN/Direct Connect to on-prem PII vault</td><td>Needed only for the hybrid network boundary and compliance tunnel; minimal footprint.</td></tr>
+</table>
+<p><b>Primary choice: PaaS + SaaS.</b> The hotel is a hospitality business, not a tech company — it should not manage VMs/OS. IaaS is limited to the network edge of the hybrid model.</p>
+
+<h3>3.2 Deployment Model</h3>
+<div class="callout">
+  <b>Hybrid Cloud</b> (Public cloud for analytics/APP/BI + Private on-prem vault for regulated PII/payment tokens).
+  <ul>
+    <li><b>Public</b> hosts the bulk of compute, storage, warehouse, and BI — elastic and cheap.</li>
+    <li><b>Private/on-prem</b> holds guest national IDs and payment tokens behind a VPN/Direct Connect tunnel, satisfying PCI-DSS &amp; GDPR data-residency rules.</li>
+    <li><b>Why hybrid, not pure public:</b> regulatory and guest-trust requirements mandate keeping sensitive identifiers under direct organizational control. Pure private would forfeit elasticity and BI tooling speed.</li>
+  </ul>
+</div>
+
+<div class="pagebreak"></div>
+
+<h2>Task 4 — Cost Estimation (1,000 Users)</h2>
+<p class="small">Indicative pricing on AWS-equivalent services, USD/month, 8 properties, ~1,000 active users, ~100k bookings/year.</p>
+
+<table>
+  <tr><th>Item</th><th>Specification</th><th>Monthly Cost</th></tr>
+  <tr><td>Hosting (App Services / Containers)</td><td>3 env × 2 vCPU / 4GB, auto-scale to ~6 instances at peak</td><td>$420</td></tr>
+  <tr><td>Relational Database (Managed)</td><td>db.t3.medium HA (primary+standby), 50 GB</td><td>$210</td></tr>
+  <tr><td>Cache (Redis)</td><td>1 GB managed node</td><td>$35</td></tr>
+  <tr><td>Object Storage (S3)</td><td>200 GB docs/images + 500 GB backups</td><td>$28</td></tr>
+  <tr><td>Data Lake + Warehouse</td><td>200 GB warehouse, ~1 TB scan/month</td><td>$180</td></tr>
+  <tr><td>ETL / Serverless + Queue</td><td>~5M invocations + pipeline runs</td><td>$60</td></tr>
+  <tr><td>API / Gateway + CDN</td><td>~10M API calls, 2 TB egress/CDN</td><td>$140</td></tr>
+  <tr><td>BI (SaaS — Power BI Pro)</td><td>25 analyst/manager licenses</td><td>$125</td></tr>
+  <tr><td>Networking (ALB, DNS, WAF, VPN)</td><td>Load balancer + WAF + Direct Connect port share</td><td>$95</td></tr>
+  <tr><td>Monitoring + Backup vault</td><td>Logs, metrics, cross-region backup</td><td>$55</td></tr>
+  <tr><td><b>Total Estimated</b></td><td></td><td><b>$1,348 / month</b></td></tr>
+</table>
+
+<h3>4.1 Why This Design Is Cost-Effective</h3>
+<ul>
+  <li><b>Pay-per-use:</b> serverless + auto-scaling means the hotel pays for peak only during high season, idle capacity shrinks at night.</li>
+  <li><b>No CapEx:</b> eliminates ~$40k–$60k upfront server/storage purchase and ongoing DC power/cooling.</li>
+  <li><b>Managed services:</b> offloading DB patching, backups, and BI to PaaS/SaaS removes 2–3 FTE ops salaries.</li>
+  <li><b>Storage tiering:</b> cold backups and raw lake data use cheap object storage, not expensive DB blocks.</li>
+  <li><b>Hybrid only where required:</b> keeping a tiny on-prem PII vault avoids the much higher cost of a full private cloud.</li>
+  <li><b>ROI:</b> dynamic pricing + reduced vacancy (even a 2% occupancy lift) recovers the entire monthly bill many times over.</li>
+</ul>
+
+<div class="pagebreak"></div>
+
+<h2>Task 5 — Risk Analysis</h2>
+
+<div class="risk">
+  <h3>Risk 1 — Data Breach / Unauthorized Access</h3>
+  <p><b>Impact:</b> Guest PII and payment data leak → GDPR/PCI fines, loss of trust, legal exposure.</p>
+  <p><b>Mitigation:</b> Encrypt data at rest (KMS) and in transit (TLS); WAF + API Gateway throttling; least-privilege IAM roles; centralized audit logs; store payment tokens/IDs only in the private vault; annual penetration testing and PCI-DSS compliance scans.</p>
+</div>
+
+<div class="risk">
+  <h3>Risk 2 — Downtime / Service Outage</h3>
+  <p><b>Impact:</b> Booking system offline during peak = lost revenue and stranded guests.</p>
+  <p><b>Mitigation:</b> Multi-AZ deployment with ALB health checks; managed DB with standby + automated cross-region backups (RPO &lt; 5 min, RTO &lt; 30 min); CDN serves cached static content if origin fails; defined runbooks and 99.95% provider SLA with credits.</p>
+</div>
+
+<div class="risk">
+  <h3>Risk 3 — Vendor Lock-in</h3>
+  <p><b>Impact:</b> High switching cost if provider raises prices or exits a region.</p>
+  <p><b>Mitigation:</b> Use containers (portable) and infrastructure-as-code (Terraform); keep data in open formats (Parquet/Iceberg) in the Data Lake; abstract BI via standard SQL so it can move between Redshift/BigQuery/Snowflake; hybrid vault ensures critical data is never 100% provider-bound.</p>
+</div>
+
+<div class="risk">
+  <h3>Risk 4 — Internet Dependency</h3>
+  <p><b>Impact:</b> Property loses connectivity → front desk cannot check guests in/out.</p>
+  <p><b>Mitigation:</b> Local kiosk/reception cache with offline mode for check-in/out; redundant ISP links + 4G/5G failover at each property; queue-based sync reconciles local changes once connectivity returns.</p>
+</div>
+
+<h2>Conclusion</h2>
+<p>The proposed <b>hybrid cloud data-analytics platform</b> transforms Grandview Hotels from siloed, manual reporting to a
+real-time, predictive, group-wide operation. By combining <b>PaaS + SaaS</b> on a <b>public cloud</b> with a small
+<b>private</b> compliance vault, the hotel gains弹性 scale, lower TCO (~$1.35k/month), and the analytics foundation for
+dynamic pricing and elevated guest experience — while keeping regulated data secure and portable.</p>
+
+<p class="small">Deliverables: this PDF report + <code>architecture.drawio</code> (editable in draw.io / Lucidchart).</p>
+
+</body>
+</html>

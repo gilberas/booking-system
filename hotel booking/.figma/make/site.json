@@ -1,0 +1,10 @@
+{
+  "description": "Offers a dynamic, modern landing page showcasing multiple hotels with high-quality visuals to attract and engage potential guests effectively.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

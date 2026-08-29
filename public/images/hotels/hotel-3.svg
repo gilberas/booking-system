@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="night" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f0c29"/>
+      <stop offset="50%" stop-color="#302b63"/>
+      <stop offset="100%" stop-color="#24243e"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#night)" width="800" height="600"/>
+  <circle fill="#fff" opacity="0.8" cx="650" cy="80" r="40"/>
+  <circle fill="#fff" opacity="0.1" cx="100" cy="60" r="2"/>
+  <circle fill="#fff" opacity="0.2" cx="200" cy="40" r="1.5"/>
+  <circle fill="#fff" opacity="0.15" cx="300" cy="80" r="1"/>
+  <circle fill="#fff" opacity="0.3" cx="500" cy="30" r="2"/>
+  <circle fill="#fff" opacity="0.1" cx="700" cy="120" r="1.5"/>
+  <rect fill="#2c4a35" x="200" y="250" width="400" height="250" rx="4"/>
+  <rect fill="#3d6349" x="220" y="270" width="360" height="210" rx="2"/>
+  <rect fill="#FFD700" opacity="0.6" x="250" y="300" width="50" height="40" rx="2"/>
+  <rect fill="#FFD700" opacity="0.4" x="340" y="300" width="50" height="40" rx="2"/>
+  <rect fill="#FFD700" opacity="0.6" x="430" y="300" width="50" height="40" rx="2"/>
+  <rect fill="#FFD700" opacity="0.4" x="520" y="300" width="50" height="40" rx="2"/>
+  <rect fill="#FFD700" opacity="0.3" x="250" y="380" width="50" height="40" rx="2"/>
+  <rect fill="#FFD700" opacity="0.5" x="340" y="380" width="50" height="40" rx="2"/>
+  <rect fill="#FFD700" opacity="0.3" x="430" y="380" width="50" height="40" rx="2"/>
+  <rect fill="#FFD700" opacity="0.6" x="520" y="380" width="50" height="40" rx="2"/>
+  <rect fill="#c9a959" x="370" y="430" width="60" height="70" rx="2"/>
+  <text fill="#fff" font-family="serif" font-size="28" x="400" y="560" text-anchor="middle">City Center Hotel</text>
+</svg>

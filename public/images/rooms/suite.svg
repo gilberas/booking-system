@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect fill="#f5f1eb" width="800" height="600"/>
+  <rect fill="#e8e0d4" x="80" y="180" width="640" height="270" rx="8"/>
+  <rect fill="#ddd8ce" x="100" y="190" width="600" height="250" rx="4"/>
+  <rect fill="#fff" x="120" y="210" width="260" height="210" rx="2"/>
+  <rect fill="#fff" x="400" y="210" width="180" height="210" rx="2"/>
+  <rect fill="#fff" x="600" y="210" width="80" height="210" rx="2"/>
+  <rect fill="#2c4a35" opacity="0.1" x="130" y="220" width="120" height="120" rx="2"/>
+  <rect fill="#c9a959" opacity="0.3" x="410" y="220" width="80" height="80" rx="2"/>
+  <rect fill="#8B4513" x="280" y="360" width="240" height="100" rx="2"/>
+  <rect fill="#2c4a35" opacity="0.15" x="610" y="220" width="60" height="200" rx="2"/>
+  <circle fill="#2c4a35" opacity="0.08" cx="720" cy="80" r="80"/>
+  <text fill="#2c4a35" font-family="serif" font-size="32" x="400" y="520" text-anchor="middle">Suite</text>
+  <text fill="#8a8a82" font-family="sans-serif" font-size="14" x="400" y="550" text-anchor="middle">Luxury suite with living area</text>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#87CEEB"/>
+      <stop offset="100%" stop-color="#E0F0FF"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#sky)" width="800" height="600"/>
+  <rect fill="#2c4a35" x="100" y="200" width="600" height="300" rx="4"/>
+  <rect fill="#3d6349" x="120" y="220" width="560" height="260" rx="2"/>
+  <rect fill="#fff" opacity="0.3" x="160" y="260" width="80" height="60" rx="2"/>
+  <rect fill="#fff" opacity="0.3" x="280" y="260" width="80" height="60" rx="2"/>
+  <rect fill="#fff" opacity="0.3" x="400" y="260" width="80" height="60" rx="2"/>
+  <rect fill="#fff" opacity="0.3" x="520" y="260" width="80" height="60" rx="2"/>
+  <rect fill="#fff" opacity="0.3" x="160" y="360" width="80" height="60" rx="2"/>
+  <rect fill="#fff" opacity="0.3" x="280" y="360" width="80" height="60" rx="2"/>
+  <rect fill="#fff" opacity="0.3" x="400" y="360" width="80" height="60" rx="2"/>
+  <rect fill="#fff" opacity="0.3" x="520" y="360" width="80" height="60" rx="2"/>
+  <rect fill="#8B4513" x="360" y="420" width="80" height="80" rx="2"/>
+  <rect fill="#87CEEB" opacity="0.5" x="0" y="500" width="800" height="100"/>
+  <text fill="#fff" font-family="serif" font-size="28" x="400" y="560" text-anchor="middle">Grandview Hotel</text>
+</svg>

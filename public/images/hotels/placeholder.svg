@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect fill="#ece7de" width="800" height="600"/>
+  <rect fill="#ddd8ce" x="0" y="300" width="800" height="300"/>
+  <circle fill="#2c4a35" opacity="0.06" cx="600" cy="200" r="200"/>
+  <circle fill="#2c4a35" opacity="0.04" cx="200" cy="450" r="150"/>
+  <text fill="#2c4a35" font-family="serif" font-size="36" x="400" y="280" text-anchor="middle">Hotel Image</text>
+  <text fill="#8a8a82" font-family="sans-serif" font-size="14" x="400" y="310" text-anchor="middle">Place your photo here</text>
+</svg>

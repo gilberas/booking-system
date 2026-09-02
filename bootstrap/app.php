@@ -14,6 +14,7 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
         then: function () {
             require __DIR__.'/../routes/settings.php';
+            require __DIR__.'/../routes/fortify.php';
         },
     )
     ->withMiddleware(function (Middleware $middleware): void {

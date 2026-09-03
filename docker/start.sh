@@ -16,5 +16,9 @@ php artisan view:cache
 # Run database migrations
 php artisan migrate --force || true
 
+# Ensure storage/bootstrap dirs are owned by the php-fpm user
+chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
+chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
+
 # Start php-fpm + nginx via supervisor
 exec supervisord -c /etc/supervisord.conf

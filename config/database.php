@@ -97,7 +97,7 @@ return [
             'username' => env('DB_USERNAME'),
             'password' => env('DB_PASSWORD'),
             'charset' => env('DB_CHARSET', 'utf8'),
-            'prefix' => '',
+            'prefix' => 'booking_',
             'prefix_indexes' => true,
             'search_path' => 'public',
         ],
